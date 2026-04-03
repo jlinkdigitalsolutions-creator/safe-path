@@ -1,10 +1,8 @@
 const path = require("path");
 
-const root = path.resolve(__dirname);
-
 module.exports = {
-  config: path.join(root, "config", "database.cjs"),
-  "models-path": path.join(root, "src", "database", "models"),
-  "migrations-path": path.join(root, "migrations"),
-  "seeders-path": path.join(root, "seeders"),
+  config: path.resolve("config", "database.cjs"),
+  "models-path": path.resolve("src", "database", "models"),
+  "migrations-path": path.resolve("migrations"),
+  "seeders-path": path.resolve("seeders"),
 };
