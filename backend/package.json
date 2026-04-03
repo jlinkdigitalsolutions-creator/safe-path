@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
+    "build": "npm run db:migrate && tsc",
     "start": "node dist/index.js",
     "db:migrate": "sequelize-cli db:migrate --config config/database.cjs",
     "db:migrate:undo": "sequelize-cli db:migrate:undo --config config/database.cjs",
     "db:migrate:undo:all": "sequelize-cli db:migrate:undo:all --config config/database.cjs",
     "db:seed": "tsx src/database/seed.ts",
-    "lint": "eslint src --ext .ts"
+    "lint": "eslint src --ext .ts",
+    "render-build": "npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
