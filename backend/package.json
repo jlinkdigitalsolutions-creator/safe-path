@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "npm run db:migrate && npx tsc",
+    "build": "npx tsc",
     "start": "node dist/index.js",
     "db:migrate": "npx sequelize-cli db:migrate --config config/database.cjs",
+    "release": "npm run db:migrate",
     "db:migrate:undo": "npx sequelize-cli db:migrate:undo --config config/database.cjs",
     "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all --config config/database.cjs",
     "db:seed": "tsx src/database/seed.ts",
