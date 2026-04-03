@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SafePath — deep purple primary, soft blue secondary, semantic greens/reds */
+    /* Neutrals: bg #F9FAFB · borders #E5E7EB · secondary text #6B7280 */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    /* Primary — #7C3AED */
+    --primary: 258 90% 58%;
+    --primary-foreground: 0 0% 100%;
+    /* Secondary buttons — soft blue surfaces (#3B82F6 family) */
+    --secondary: 217 91% 96%;
+    --secondary-foreground: 217 91% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 258 100% 97%;
+    --accent-foreground: 258 45% 30%;
+    /* Alert — #EF4444 (soft, not harsh) */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 258 90% 58%;
+    /* Charts & links — #3B82F6 */
+    --brand-blue: 217 91% 60%;
+    /* Success — #10B981 */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --radius: 0.875rem;
+  }
+
+  .dark {
+    /* Background #0F172A */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 217 91% 72%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 258 40% 22%;
+    --accent-foreground: 258 85% 92%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 258 90% 66%;
+    --brand-blue: 217 91% 65%;
+    --success: 160 72% 45%;
+    --success-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    @apply bg-primary/25 text-foreground;
+  }
+}

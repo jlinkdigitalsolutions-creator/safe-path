@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# Backend (Node / Express)
+backend/dist/
+backend/node_modules/
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Frontend (Next.js)
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/node_modules/
+frontend/.env
+frontend/.env.*
+!frontend/.env.local.example
+
+# Logs & debug
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editors
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing & coverage
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+*.pem
+.vercel
+.turbo
